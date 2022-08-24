@@ -1,0 +1,29 @@
+* {
+    font-family: $fuente;
+}
+
+.jumbotron {
+    height: 300px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.bg-menu {
+    background-color: $colorBgMenu;
+}
+
+.logo-nav {
+    height: 45px;
+}
+
+.btn-verde {
+    background-color: $colorBgMenu;
+    border: 0.5px #198754 solid;
+    color: #198754;
+
+    &:hover {
+        background-color: #f99698;
+        border: 0.5px #198754 solid;
+        color: #ffffff;
+    }
+}

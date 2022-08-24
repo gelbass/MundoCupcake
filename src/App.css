@@ -1,38 +1,30 @@
-.App {
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.jumbotron {
+  height: 300px;
   text-align: center;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-menu {
+  background-color: rgba(138, 233, 181, 0.4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo-nav {
+  height: 45px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-verde {
+  background-color: rgba(138, 233, 181, 0.4);
+  border: 0.5px #198754 solid;
+  color: #198754;
+}
+.btn-verde:hover {
+  background-color: #f99698;
+  border: 0.5px #198754 solid;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
