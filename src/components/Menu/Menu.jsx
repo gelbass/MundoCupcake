@@ -1,4 +1,6 @@
-function Header() {
+import React from "react";
+
+const Header =() => {
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
   return (
