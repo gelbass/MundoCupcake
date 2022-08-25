@@ -2,7 +2,7 @@ import React from "react";
 
 const EnConstruccion = () => {
     let logoMc = "./mundocupcake-02.png";
-    let logoConstruccion = "./sitioEnConstruccion.jpg"
+    let logoConstruccion = "./sitioEnConstruccion.jpg";
     return (
         <div>
             <div className="jumbotron">
