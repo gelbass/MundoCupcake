@@ -5,7 +5,6 @@ const Header = () => {
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
   return (
-    <>
       <nav className="navbar navbar-expand-lg bg-menu">
         <div className="container-fluid">
           <a className="navbar-brand" href={url}><img src={logoNav} alt="LogoMC" className="logo-nav" /></a>
@@ -28,7 +27,6 @@ const Header = () => {
             <CartWidget cantidad={"2"} />
         </div>
       </nav>
-    </>
   );
 };
 
