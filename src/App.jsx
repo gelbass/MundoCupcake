@@ -1,13 +1,13 @@
 import './App.css';
 import EnConstruccion from './components/EnConstruccion/EnConstruccion';
-import Menu from './components/Menu/Menu';
+import Menu from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <div>
+    <>
       <Menu />
       <EnConstruccion />
-    </div>
+    </>
   );
 }
 

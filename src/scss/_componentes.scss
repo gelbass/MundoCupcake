@@ -7,7 +7,11 @@
     text-align: center;
     padding-top: 20px;
 }
-
+.p{
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding: 10px;
+}
 .bg-menu {
     background-color: $colorBgMenu;
 }
@@ -26,4 +30,15 @@
         border: 0.5px #198754 solid;
         color: #ffffff;
     }
+}
+.cartWidget{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #f99698;
+    color: #ffffff;
+    align-items: center;
+    font-size: 30px;
 }
