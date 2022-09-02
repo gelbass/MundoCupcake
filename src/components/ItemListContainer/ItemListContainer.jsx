@@ -1,8 +1,9 @@
 import React from "react";
+import CartWidget from "../CartWidget/CartWidget";
 
 const ItemListContainer = (props) => {
   return (
-    <p>{props.valor}</p>
+    <CartWidget valor={props.cantidad}/>
   );
 }
 

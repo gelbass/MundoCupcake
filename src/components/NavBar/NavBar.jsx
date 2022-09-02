@@ -1,5 +1,5 @@
 import React from "react";
-import CartWidget from "../CartWidget/CartWidget";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const Header = () => {
   let url = "#";
@@ -24,7 +24,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-            <CartWidget cantidad={"2"} />
+          <ItemListContainer cantidad={"2"} />
         </div>
       </nav>
   );
