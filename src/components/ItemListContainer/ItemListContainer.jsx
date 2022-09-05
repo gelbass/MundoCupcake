@@ -1,9 +1,13 @@
 import React from "react";
-import CartWidget from "../CartWidget/CartWidget";
+import Card from "../Card/Card";
+// import CartWidget from "../CartWidget/CartWidget";
 
-const ItemListContainer = (props) => {
+const producto = { id: "CCK-OREO", nombre: "Cupcake de Oreo", cantidad: 10 };
+const ItemListContainer = () => {
   return (
-    <CartWidget valor={props.cantidad}/>
+    <>
+      <Card stock = {producto.cantidad} initial={"1"}/>
+    </>
   );
 }
 

@@ -1,12 +1,13 @@
 import './App.css';
-import EnConstruccion from './components/EnConstruccion/EnConstruccion';
-import Menu from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <>
-      <Menu />
-      <EnConstruccion />
+      <NavBar />
+      <ItemListContainer cantidad="1" />
+      {/* <EnConstruccion /> */}
     </>
   );
 }

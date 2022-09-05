@@ -1,10 +1,10 @@
 import React from "react";
 
-const CartWidget = (props) => {
+const CartWidget = ({cantidad}) => {
   return (
     <div className="cartWidget">
       <i className="fa-solid fa-cart-shopping" />
-      <p>{props.valor}</p>
+      <p>{cantidad}</p>
     </div>
   );
 };

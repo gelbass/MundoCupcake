@@ -7,11 +7,13 @@
     text-align: center;
     padding-top: 20px;
 }
-p{
+
+p {
     margin-top: 0;
     margin-bottom: 0rem;
     padding: 10px;
 }
+
 .bg-menu {
     background-color: $colorBgMenu;
 }
@@ -22,23 +24,69 @@ p{
 
 .btn-verde {
     background-color: $colorBgMenu;
-    border: 0.5px #198754 solid;
-    color: #198754;
+    border: 0.5px $color3 solid;
+    color: $color3;
 
     &:hover {
-        background-color: #f99698;
-        border: 0.5px #198754 solid;
-        color: #ffffff;
+        background-color: $color2;
+        border: 0.5px solid;
+        color: $color4;
     }
 }
-.cartWidget{
+
+.cartWidget {
     width: 80px;
     height: 33px;
     display: flex;
     justify-content: center;
     border-radius: 20px;
-    background-color: #f99698;
-    color: #ffffff;
+    background-color: $color2;
+    color: $color4;
     align-items: center;
     font-size: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 9px;
+    grid-template-areas:
+        "img detalle"
+        "img compra";
+
+    width: 400px;
+    height: 240px;
+    border: 1px solid $color2;
+    margin: 15px;
+    padding: 20px;
+}
+.cantidadCompra{
+    width: 50px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid $color3;
+}
+.img {
+    grid-area: img;
+}
+
+.detalle {
+    grid-area: detalle;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.compra {
+    grid-area: compra;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img-producto{
+    border-radius: 10px;
 }

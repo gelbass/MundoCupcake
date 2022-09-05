@@ -1,9 +1,10 @@
 import React from "react";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import CartWidget from "../CartWidget/CartWidget";
 
-const Header = () => {
+const NavBar = () => {
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
+  
   return (
       <nav className="navbar navbar-expand-lg bg-menu">
         <div className="container-fluid">
@@ -24,10 +25,10 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <ItemListContainer cantidad={"2"} />
+            <CartWidget cantidad={"0"} />
         </div>
       </nav>
   );
 };
 
-export default Header;
+export default NavBar;
