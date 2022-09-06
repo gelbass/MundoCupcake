@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 
-const Card = ({ nombre, stock, initial }) => {
+const Item = ({ nombre, stock, initial }) => {
 	
 	return (
 		<>
@@ -18,4 +18,4 @@ const Card = ({ nombre, stock, initial }) => {
 		</>
 	);
 }
-export default Card;
+export default Item;
