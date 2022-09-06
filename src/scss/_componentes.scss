@@ -90,3 +90,9 @@ p {
 .img-producto{
     border-radius: 10px;
 }
+
+.listProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
