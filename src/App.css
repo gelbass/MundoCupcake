@@ -23,9 +23,9 @@ p {
 }
 
 .btn-verde {
-  background-color: rgba(138, 233, 181, 0.4);
+  background-color: #8ae9b5;
   border: 0.5px #198754 solid;
-  color: #198754;
+  color: #00140b;
 }
 .btn-verde:hover {
   background-color: #f99698;

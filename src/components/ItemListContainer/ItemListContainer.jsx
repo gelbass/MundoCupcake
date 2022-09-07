@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import ItemList from "../ItemList/ItemList";
 
 
@@ -9,9 +11,20 @@ const productos = [{ id: "CCK-OREO", nombre: "Cupcake de Oreo", cantidad: 10 },
 { id: "CCK-COCO-DLCH", nombre: "Cupcake de Coco con Dulce de Leche", cantidad: 30 }
 ];
 const ItemListContainer = () => {
+  const [producto, setProducto] = useState([]);
+  useEffect(()=>{
+    const promesa = new Promise((resolve,rejet)=>{
+      setTimeout(() => {
+        resolve(productos);
+      }, 2000);
+    });
+    promesa.then((request)=>{
+      setProducto(request);
+    })
+  })
   return (
     <>
-      <ItemList productos = {productos}/>
+      <ItemList productos = {producto}/>
     </>
   );
 }

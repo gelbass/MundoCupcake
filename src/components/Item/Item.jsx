@@ -2,7 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ nombre, stock, initial }) => {
-	
+	// console.log("item");
 	return (
 		<>
 			<div className="card">
