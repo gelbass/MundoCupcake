@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "./CartWidget";
 
 const ItemCount = ({ stock, initial }) => {
   const [addCart, setAddCart] = useState("0");
