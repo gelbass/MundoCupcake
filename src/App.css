@@ -50,11 +50,19 @@ p {
   grid-template-rows: repeat(2, 1fr);
   gap: 0px 9px;
   grid-template-areas: "img detalle" "img compra";
-  width: 400px;
-  height: 240px;
   border: 1px solid #f99698;
   margin: 15px;
   padding: 20px;
+}
+
+.card--md {
+  width: 400px;
+  height: 240px;
+}
+
+.card--xl {
+  width: 800px;
+  height: 500px;
 }
 
 .cantidadCompra {
@@ -75,7 +83,9 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .compra {
@@ -88,6 +98,10 @@ p {
 
 .img-producto {
   border-radius: 10px;
+}
+
+.img-producto--xl {
+  width: 310px;
 }
 
 .listProductos {

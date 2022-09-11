@@ -6,23 +6,24 @@ import NavBar from './components/NavBar';
 
 function App() {
   const [productos, setProductos] = useState([]);
+
   useEffect(() => {
+    console.log("entro");
     setTimeout(() => {
       fetch('./productos.json').then((response) => {
+        console.log(response);
         return response.json();
       }).then((result) => {
         setProductos(result);
-        console.log(result)
       });
     }, 1000);
-  });
-  console.log(productos);
-  console.log(productos[0]);
+  },[]);
+
   return (
     <>
       <NavBar />
       <ItemListContainer productos={productos} cantidad="1" />
-      <ItemDetailContainer producto={productos[0]}/>
+      <ItemDetailContainer producto={productos[0]} />
     </>
   );
 }
