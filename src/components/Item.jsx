@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = ({ nombre,urlImg, stock, precio }) => {
+const Item = ({id,nombre,urlImg, stock, precio }) => {
 	return (
 		<>
 			<div className="card card--md">
@@ -11,7 +12,7 @@ const Item = ({ nombre,urlImg, stock, precio }) => {
 					<p>Cantidad disponible: {stock} </p>
 				</div>
 				<div className="compra">
-					<input type="button" className="btn btn-verde" value="Comprar" />
+					<Link to={"/producto/"+id} className="btn btn-verde" >Comprar</Link>
 				</div>
 			</div>
 		</>

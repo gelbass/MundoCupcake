@@ -21,7 +21,6 @@ const ItemCount = ({ stock, initial }) => {
     setCountAdd(valor);
   }
   const onAdd = () => {
-    console.log(valor);
     setAddCart(countAdd);
   }
   return (

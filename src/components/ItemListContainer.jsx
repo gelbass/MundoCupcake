@@ -1,25 +1,27 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
-const ItemListContainer = ({productos}) => { 
-  
+const ItemListContainer = ({ productos }) => {
+
+  const { categoria } = useParams();
   const [producto, setProducto] = useState([]);
   useEffect(() => {
-    const promesa = new Promise((resolve, rejet) => {
-      setTimeout(() => {
+    setTimeout(() => {
+      const promesa = new Promise((resolve, rejet) => {
         resolve(productos);
-      }, 2000);
-    });
-    promesa.then((request) => {
-      setProducto(request);
-    })
-  })
+      });
+      promesa.then((request) => {
+        setProducto(request);
+      });
+    }, 2000);
+  }, [categoria]);
   
   return (
     <>
-      <ItemList productos={producto} />
+      <h2 className="m-5 text-center">{categoria ? categoria.toUpperCase() : "PRODUCTOS"}</h2>
+      <ItemList productos={producto} categoria={categoria} />
     </>
   );
 }
