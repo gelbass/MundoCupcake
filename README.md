@@ -1,3 +1,9 @@
+![](public/mundocupcake-03.png)
+# PROYECTO ECOMMERCE MUNDO CUPCAKE
+Tienda virtual de la empresa Mundo Cupcake.
+Venta de postres en general.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
