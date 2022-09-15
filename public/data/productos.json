@@ -5,7 +5,7 @@
         "cantidad": 10,
         "precio": 57,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "CCK-VAINILLA",
@@ -14,7 +14,7 @@
         "cantidad": 20,
         "precio": 50,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "CCK-MOCA",
@@ -23,7 +23,7 @@
         "cantidad": 15,
         "precio": 85,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "CCK-MARMOLEADO",
@@ -32,7 +32,7 @@
         "cantidad": 20,
         "precio": 50,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "CCK-COCO-DLCH",
@@ -41,7 +41,7 @@
         "cantidad": 30,
         "precio": 85,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "TOR-OREO",
@@ -50,7 +50,7 @@
         "cantidad": 30,
         "precio": 850,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "TOR-BROWNIE",
@@ -59,7 +59,7 @@
         "cantidad": 30,
         "precio": 850,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "TOR-ZANAHORIA",
@@ -68,7 +68,7 @@
         "cantidad": 30,
         "precio": 850,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "GAL-CHOCO",
@@ -77,7 +77,7 @@
         "cantidad": 30,
         "precio": 100,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "GAL-MANTEQUILLA",
@@ -86,7 +86,7 @@
         "cantidad": 30,
         "precio": 100,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     },
     {
         "id": "GAL-CHIP",
@@ -95,6 +95,6 @@
         "cantidad": 30,
         "precio": 100,
         "detalle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut doloremque saepe voluptates doloribus alias, vitae, similique reprehenderit et earum natus ducimus, perferendis dignissimos hic quis quidem possimus nostrum ea impedit.",
-        "urlImg": "./img/CupCake_OREO.jpg"
+        "urlImg": "http://localhost:3000/img/CupCake_OREO.jpg"
     }
 ]

@@ -21,6 +21,11 @@ p {
 .logo-nav {
     height: 45px;
 }
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
 
 .btn-verde {
     background-color: $color1;

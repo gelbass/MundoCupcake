@@ -15,11 +15,17 @@ p {
 }
 
 .bg-menu {
-  background-color: rgba(138, 233, 181, 0.4);
+  background-color: #b0ffd4;
 }
 
 .logo-nav {
   height: 45px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .btn-verde {

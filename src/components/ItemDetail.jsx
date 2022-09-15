@@ -3,8 +3,8 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ producto, initial}) => {
 	return (
-		<>
-			<div className="container card mx-auto d-block">
+		<div className="container">
+			<div className="card card--xl mx-auto">
 				<img className="img img-producto img-producto--xl" src={producto.urlImg} alt="producto" />
 				<div className="detalle">
 					<h6>{producto.nombre}</h6>
@@ -15,7 +15,7 @@ const ItemDetail = ({ producto, initial}) => {
 					<ItemCount stock={producto.cantidad} initial={initial} />
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 export default ItemDetail;
