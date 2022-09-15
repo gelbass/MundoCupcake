@@ -1,4 +1,4 @@
-![](public/mundocupcake-03.png)
+![](public/mundocupcake-02.png)
 # PROYECTO ECOMMERCE MUNDO CUPCAKE
 Tienda virtual de la empresa Mundo Cupcake.
 Venta de postres en general.
