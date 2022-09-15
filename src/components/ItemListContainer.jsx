@@ -4,20 +4,18 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ productos }) => {
-
   const { categoria } = useParams();
   const [producto, setProducto] = useState([]);
   useEffect(() => {
     setTimeout(() => {
-      const promesa = new Promise((resolve, rejet) => {
+      const promesa = new Promise((resolve) => {
         resolve(productos);
       });
       promesa.then((request) => {
         setProducto(request);
       });
     }, 2000);
-  }, [categoria]);
-  
+  }, [categoria,producto]);
   return (
     <>
       <h2 className="m-5 text-center">{categoria ? categoria.toUpperCase() : "PRODUCTOS"}</h2>
