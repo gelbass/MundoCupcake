@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
-const NavBar = () => {
+const NavBar = (props) => {
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
 
@@ -33,7 +33,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <CartWidget cantidad={"0"} />
+        <CartWidget cantidad={props.cantCompra} />
       </div>
     </nav>
   );
