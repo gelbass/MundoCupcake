@@ -27,7 +27,7 @@ function App() {
   return (
     <Provider>
       <BrowserRouter>
-        <NavBar cantCompra={cantCompra}/>
+        <NavBar productos={productos} cantCompra={cantCompra}/>
         <Header />
         <Routes >
           <Route exact path="/" element={<ItemListContainer productos={productos} />} />

@@ -6,6 +6,15 @@ const NavBar = (props) => {
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
 
+  const categorias = []
+  
+  props.productos.forEach((elemento) => {
+    console.log(elemento.categoria);
+    if (!categorias.includes(elemento.categoria)) {
+      categorias.push(elemento.categoria);
+    }
+  });
+  console.log(categorias);
   return (
     <nav className="navbar navbar-expand-lg bg-menu">
       <div className="container-fluid">
@@ -26,9 +35,7 @@ const NavBar = (props) => {
                 Productos
               </a>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to={"/cupcakes"}>Cupcake's</Link></li>
-                <li><Link className="dropdown-item" to={"/tortas"}>Tortas</Link></li>
-                <li><Link className="dropdown-item" to={"/galletas"}>Galletas</Link></li>
+                {categorias.map(item => (<li><Link key={item.id} className="dropdown-item" to={`/${item}`}>{item.toUpperCase()}</Link></li>))}
               </ul>
             </li>
           </ul>
