@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import CartWidget from "./CartWidget";
+import CartWidget from "./Cart/CartWidget";
+import { CartContext } from "./Context/CartContext";
+
 
 const NavBar = (props) => {
+  
+  const cart = useContext(CartContext);
   let url = "#";
   let logoNav = "./mundocupcake-03.png";
 
   const categorias = []
-  
+
   props.productos.forEach((elemento) => {
-    console.log(elemento.categoria);
     if (!categorias.includes(elemento.categoria)) {
       categorias.push(elemento.categoria);
     }
   });
-  console.log(categorias);
   return (
     <nav className="navbar navbar-expand-lg bg-menu">
       <div className="container-fluid">
@@ -35,12 +37,12 @@ const NavBar = (props) => {
                 Productos
               </a>
               <ul className="dropdown-menu">
-                {categorias.map(item => (<li><Link key={item.id} className="dropdown-item" to={`/${item}`}>{item.toUpperCase()}</Link></li>))}
+              {categorias.map(item => (<li key={item}><Link className="dropdown-item" to={`/${item}`}>{item.toUpperCase()}</Link></li>))}
               </ul>
             </li>
           </ul>
         </div>
-        <CartWidget cantidad={props.cantCompra} />
+        <Link to="/carrito"><CartWidget cantidad={cart.cantCompra} /></Link>
       </div>
     </nav>
   );

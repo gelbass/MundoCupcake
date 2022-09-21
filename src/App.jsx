@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Provider from './components/Context/CartContext';
-import Header from './components/Header';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemListContainer from './components/ItemListContainer';
+import CartDetail from './components/Cart/CartDetail';
+import ItemDetailContainer from './components/Containers/ItemDetailContainer';
+import ItemListContainer from './components/Containers/ItemListContainer';
+import CartProvider from './components/Context/CartContext';
 import NavBar from './components/NavBar';
 
 function App() {
-  const [cantCompra, setCantCompra] = useState("");
-  const cartWidget = (valor)=>{
-    setCantCompra(valor);
-  }
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
@@ -25,17 +21,17 @@ function App() {
   }, []);
 
   return (
-    <Provider>
+    <CartProvider>
       <BrowserRouter>
-        <NavBar productos={productos} cantCompra={cantCompra}/>
-        <Header />
+        <NavBar productos={productos}/>
         <Routes >
           <Route exact path="/" element={<ItemListContainer productos={productos} />} />
           <Route exact path="/:categoria" element={<ItemListContainer productos={productos} />} />
-          <Route exact path="/producto/:id" element={<ItemDetailContainer productos={productos} cartWidget={cartWidget}/>} />
+          <Route exact path="/producto/:id" element={<ItemDetailContainer productos={productos}/>} />
+          <Route exact path="/carrito" element={<CartDetail />}/>
         </Routes>
       </BrowserRouter>
-    </Provider>
+    </CartProvider>
   );
 }
 

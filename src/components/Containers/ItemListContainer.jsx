@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "./ItemList";
+import Header from "../Header";
+import ItemList from "../Items/ItemList";
 
-const ItemListContainer = ({ productos }) => {
+const ItemListContainer = ({productos}) => {
   const { categoria } = useParams();
+
+
   const [producto, setProducto] = useState([]);
-  useEffect(() => {
+
+    useEffect(() => {
     setTimeout(() => {
       const promesa = new Promise((resolve) => {
         resolve(productos);
@@ -16,9 +20,10 @@ const ItemListContainer = ({ productos }) => {
       });
     }, 2000);
   }, [categoria,producto]);
+
   return (
     <>
-      <h2 className="m-5 text-center">{categoria ? categoria.toUpperCase() : "PRODUCTOS"}</h2>
+      {categoria ? <h2 className="m-5 text-center">{categoria.toUpperCase()}</h2> : <Header />}
       <ItemList productos={producto} categoria={categoria} />
     </>
   );

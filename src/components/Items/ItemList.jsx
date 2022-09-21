@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Item from "../Items/Item";
 
 const ItemList = ({ productos , categoria}) => {
 	const listadoProductos = categoria ? productos.filter(valor => valor.categoria === categoria) : productos;
