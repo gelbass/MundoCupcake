@@ -6,7 +6,7 @@ import ItemCount from "./ItemCount";
 const ItemDetail = ({ producto, itemCart, onItem }) => {
 	const [isInCart, setIsInCart] = useState(false);
 	const onAdd = (itemAdd) => {
-		itemCart.includes(itemCart.find(item => item.producto.id === producto.id)) ? Swal.fire({
+		itemCart ==[{}] && itemCart.includes(itemCart.find(item => item.producto.id === producto.id)) ? Swal.fire({
 			icon: 'error',
 			title: 'ERROR',
 			text: 'El producto ya se encuentra en el carrito',

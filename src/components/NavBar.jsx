@@ -42,7 +42,7 @@ const NavBar = (props) => {
             </li>
           </ul>
         </div>
-        <Link to="/carrito"><CartWidget cantidad={cart.cantCompra} /></Link>
+        <Link className="link" to="/carrito"><CartWidget cantidad={cart.cantCompra} /></Link>
       </div>
     </nav>
   );

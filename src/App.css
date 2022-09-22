@@ -116,4 +116,8 @@ p {
   justify-content: center;
 }
 
+.link {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=App.css.map */
