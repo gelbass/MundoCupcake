@@ -6,10 +6,8 @@ import ItemList from "../Items/ItemList";
 
 const ItemListContainer = ({productos}) => {
   const { categoria } = useParams();
-
-
   const [producto, setProducto] = useState([]);
-
+  const [loading, setLoading] = useState(true);
     useEffect(() => {
     setTimeout(() => {
       const promesa = new Promise((resolve) => {
@@ -18,13 +16,14 @@ const ItemListContainer = ({productos}) => {
       promesa.then((request) => {
         setProducto(request);
       });
+      setLoading(false)
     }, 2000);
   }, [categoria,producto]);
 
   return (
     <>
       {categoria ? <h2 className="m-5 text-center">{categoria.toUpperCase()}</h2> : <Header />}
-      <ItemList productos={producto} categoria={categoria} />
+      {loading ? console.log("loading") :<ItemList productos={producto} categoria={categoria} />}
     </>
   );
 }

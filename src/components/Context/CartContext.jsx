@@ -7,14 +7,6 @@ const CartProvider = ({ children }) => {
 	const [cantCompra, setCantCompra] = useState(0);
 	const [totalVenta, setTotalVenta] = useState(0);
 
-	// const cartWidget = () => {
-	// 	setCantCompra(itemCart.reduce((total, item) => total += item.producto.itemAdd, 0));
-	// }
-
-	// const totalCompra = () => {
-	// 	setTotalVenta(itemCart.reduce((total, item) => total += item.producto.precio * item.producto.itemAdd, 0))
-	// }
-
 	const onItem = (producto) => {
 		let totalItem = producto.precio * producto.itemAdd
 		setItemCart([...itemCart, { ...producto, totalItem }]);

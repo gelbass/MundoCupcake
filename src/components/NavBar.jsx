@@ -32,7 +32,7 @@ const NavBar = (props) => {
               <Link className="nav-link" to={url}>Nosotros</Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a href={url} className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Productos
               </a>
               <ul className="dropdown-menu">
@@ -41,7 +41,7 @@ const NavBar = (props) => {
             </li>
           </ul>
         </div>
-        {cart.cantCompra == 0 ? <CartWidget cantidad={cart.cantCompra} /> :<Link className="link" to="/carrito"> <CartWidget cantidad={cart.cantCompra} /></Link>}
+        {cart.cantCompra === 0 ? <CartWidget cantidad={cart.cantCompra} /> :<Link className="link" to="/carrito"> <CartWidget cantidad={cart.cantCompra} /></Link>}
       </div>
     </nav>
   );
