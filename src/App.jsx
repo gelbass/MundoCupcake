@@ -6,11 +6,11 @@ import ItemDetailContainer from './components/Containers/ItemDetailContainer';
 import ItemListContainer from './components/Containers/ItemListContainer';
 import CartProvider from './components/Context/CartContext';
 import NavBar from './components/NavBar';
-import { getFirestore, doc, getDoc, collection, getDocs, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { clear } from '@testing-library/user-event/dist/clear';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -31,7 +31,7 @@ function App() {
   const [productos, setProductos] = useState([]);
   useEffect(()=>{
     const db = getFirestore();
-    const dataRef = doc(db,"productos","LhAn6IEnHdGy0PHjhndi");
+    // const dataRef = doc(db,"productos","LhAn6IEnHdGy0PHjhndi");
     const productosColletion = collection(db, "Productos");
 
     getDocs(productosColletion).then((snapshot)=>{
