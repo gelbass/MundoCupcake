@@ -29,14 +29,14 @@ p {
 }
 
 .btn-verde {
-  background-color: #8ae9b5;
-  border: 0.5px #198754 solid;
-  color: #00140b;
+  background-color: #8ae9b5 !important;
+  border: 0.5px #198754 solid !important;
+  color: #00140b !important;
 }
 .btn-verde:hover {
-  background-color: #f99698;
-  border: 0.5px solid;
-  color: #ffffff;
+  background-color: #f99698 !important;
+  border: 0.5px solid !important;
+  color: #ffffff !important;
 }
 
 .cartWidget {

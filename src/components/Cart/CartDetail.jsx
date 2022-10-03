@@ -34,7 +34,7 @@ const CartDetail = () => {
 								<td></td>
 								<td>Total compra</td>
 								<td>$ {cart.totalVenta}</td>
-								<td><input className="btn btn-verde" type="button" value="Finalizar compra" onClick={() => cart.deleteItem()} /></td>
+								<td><Link to="/checkout" className="btn btn-verde">Finalizar compra</Link></td>
 							</tr>
 						</tfoot>
 					</table>
