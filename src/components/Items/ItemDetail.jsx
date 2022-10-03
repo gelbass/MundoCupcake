@@ -17,7 +17,7 @@ const ItemDetail = ({ producto, itemCart, onItem }) => {
 
 	return (
 		<>
-			<div className="card card--xl mx-auto">
+			<div className="cards card--xl mx-auto">
 				<img className="img img-producto img-producto--xl" src={producto.img} alt="producto" />
 				<div className="detalle">
 					<h6>{producto.nombre}</h6>

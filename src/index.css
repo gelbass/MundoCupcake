@@ -9,9 +9,9 @@
 }
 
 p {
-  margin-top: 0 !important;
-  margin-bottom: 0rem !important;
-  padding: 10px !important;
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding: 10px;
 }
 
 .bg-menu {
@@ -51,13 +51,12 @@ p {
   font-size: 20px;
 }
 
-.cards {
+.card {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 0px 9px;
   grid-template-areas: "img detalle" "img compra";
   border: 1px solid #f99698;
-  border-radius: 20px;
   margin: 15px;
   padding: 20px;
 }
@@ -121,4 +120,4 @@ p {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=index.css.map */

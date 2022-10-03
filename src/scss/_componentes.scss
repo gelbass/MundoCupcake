@@ -9,9 +9,9 @@
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 0rem;
-    padding: 10px;
+    margin-top: 0 !important;
+    margin-bottom: 0rem !important;
+    padding: 10px !important;
 }
 
 .bg-menu {
@@ -51,7 +51,7 @@ p {
     font-size: 20px;
 }
 
-.card {
+.cards {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 0px 9px;
@@ -60,6 +60,7 @@ p {
         "img compra";
 
         border: 1px solid $color2;
+        border-radius: 20px;
         margin: 15px;
         padding: 20px;
 }
