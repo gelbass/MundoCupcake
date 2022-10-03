@@ -10,6 +10,7 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import Checkout from './components/Cart/Checkout';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -29,6 +30,7 @@ const app = initializeApp(firebaseConfig);
 console.log(app);
 function App() {
   const [productos, setProductos] = useState([]);
+  const [checkOut, setCheckOut] = useState([]);
   useEffect(()=>{
     const db = getFirestore();
     // const dataRef = doc(db,"productos","LhAn6IEnHdGy0PHjhndi");
@@ -49,6 +51,7 @@ function App() {
           <Route exact path="/:categoria" element={<ItemListContainer productos={productos} />} />
           <Route exact path="/producto/:id" element={<ItemDetailContainer productos={productos} />} />
           <Route exact path="/carrito" element={<CartDetail />} />
+          <Route exact path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
