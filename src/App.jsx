@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/Containers/ItemDetailContainer';
 import ItemListContainer from './components/Containers/ItemListContainer';
 import CartProvider from './components/Context/CartContext';
 import NavBar from './components/NavBar';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, setDoc ,doc, addDoc} from 'firebase/firestore';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -27,10 +27,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log(app);
 function App() {
+
   const [productos, setProductos] = useState([]);
-  const [checkOut, setCheckOut] = useState([]);
+  // const [checkOut, setCheckOut] = useState([]);
   useEffect(()=>{
     const db = getFirestore();
     // const dataRef = doc(db,"productos","LhAn6IEnHdGy0PHjhndi");
@@ -41,6 +41,20 @@ function App() {
     });
 
   },[])
+  const compra = (pedido) =>{
+    const db = getFirestore();
+    const compraDb = collection(db, "ventas");
+    addDoc(doc(db,"ventas"),{
+      nombre: pedido.nombre,
+      email: pedido.email,
+      telefono: pedido.telefono,
+      productos: pedido.productos
+    }).then(()=>{
+      console.log("Se agrego la venta");
+    }).catch((error)=>{
+      console.log(error);
+    })
+  }
   
   return (
     <CartProvider>
@@ -51,7 +65,7 @@ function App() {
           <Route exact path="/:categoria" element={<ItemListContainer productos={productos} />} />
           <Route exact path="/producto/:id" element={<ItemDetailContainer productos={productos} />} />
           <Route exact path="/carrito" element={<CartDetail />} />
-          <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/checkout" element={<Checkout compra={compra}/>} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
