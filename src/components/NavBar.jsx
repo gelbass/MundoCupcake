@@ -17,7 +17,7 @@ const NavBar = (props) => {
     }
   });
   return (
-    <nav className="navbar navbar-expand-lg bg-menu">
+    <nav className="navbar navbar-dark navbar-expand-lg bg-menu">
       <div className="container-fluid">
         <Link className="navbar-brand" to={"/"}><img src={logoNav} alt="LogoMC" className="logo-nav" /></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,8 +40,12 @@ const NavBar = (props) => {
               </ul>
             </li>
           </ul>
+          <div className="container__user">
+            <i className="bi bi-person-circle"></i>
+            <h6 className="user">Usuario Demo</h6>
+          </div>
         </div>
-        {cart.cantCompra === 0 ? <CartWidget cantidad={cart.cantCompra} /> :<Link className="link" to="/carrito"> <CartWidget cantidad={cart.cantCompra} /></Link>}
+        {cart.cantCompra === 0 ? <CartWidget cantidad={cart.cantCompra} /> : <Link className="link" to="/carrito"> <CartWidget cantidad={cart.cantCompra} /></Link>}
       </div>
     </nav>
   );

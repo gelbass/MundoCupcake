@@ -17,12 +17,12 @@ const ItemDetail = ({ producto, itemCart, onItem }) => {
 
 	return (
 		<>
-			<div className="cards card--xl mx-auto">
+			<div className="card card--xl mx-auto">
 				<img className="img img-producto img-producto--xl" src={producto.img} alt="producto" />
 				<div className="detalle">
-					<h6>{producto.nombre}</h6>
-					<p>{producto.descripcion}</p>
-					<b>${producto.precio}</b>
+					<h5 className="detalle--titulo">{producto.nombre}</h5>
+					<h6>{producto.descripcion}</h6>
+					<h6 className="detalle--precio">${producto.precio}</h6>
 				</div>
 				<div className="compra">
 					{isInCart ? <Link to="/carrito" className="btn btn-verde">Terminar Compra</Link> : <ItemCount stock={producto.cantidad} initial={1} onAdd={onAdd} />}

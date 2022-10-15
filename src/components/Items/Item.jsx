@@ -6,10 +6,10 @@ const Item = ({id,nombre,img, stock, precio }) => {
 		<>
 			<div className="cards card--md">
 				<img className="img img-producto" src={img} alt="producto" />
-				<div className="detalle">
-					<h6>{nombre}</h6>
-					<b>Precio: ${precio} </b>
-					<p>Cantidad disponible: {stock} </p>
+				<div className="card__detalle">
+					<h5 className="detalle--titulo">{nombre}</h5>
+					<h6 className="detalle--precio">$ {precio} </h6>
+					<h6 className="detalle--cantidad">Cantidad disponible: {stock} </h6>
 				</div>
 				<div className="compra">
 					<Link to={"/producto/"+id} className="btn btn-verde" >Comprar</Link>

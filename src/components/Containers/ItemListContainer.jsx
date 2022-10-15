@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
 import ItemList from "../Items/ItemList";
+import Loading from "../Loading";
 
-const ItemListContainer = ({productos}) => {
+const ItemListContainer = ({ productos }) => {
   const { categoria } = useParams();
   const [producto, setProducto] = useState([]);
   const [loading, setLoading] = useState(true);
-    useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       const promesa = new Promise((resolve) => {
         resolve(productos);
@@ -18,12 +19,12 @@ const ItemListContainer = ({productos}) => {
       });
       setLoading(false)
     }, 2000);
-  }, [categoria,producto]);
+  }, [categoria, producto]);
 
   return (
     <>
       {categoria ? <h2 className="m-5 text-center">{categoria.toUpperCase()}</h2> : <Header />}
-      {loading ? console.log("loading") :<ItemList productos={producto} categoria={categoria} />}
+      {loading ? <Loading /> : <ItemList productos={producto} categoria={categoria} />}
     </>
   );
 }

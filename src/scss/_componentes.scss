@@ -2,12 +2,6 @@
     font-family: $fuente;
 }
 
-.jumbotron {
-    height: 300px;
-    text-align: center;
-    padding-top: 20px;
-}
-
 p {
     margin-top: 0 !important;
     margin-bottom: 0rem !important;
@@ -21,10 +15,18 @@ p {
 .logo-nav {
     height: 45px;
 }
-.navbar{
+
+.navbar {
     position: sticky;
     top: 0px;
     z-index: 1;
+}
+
+.nav-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
 }
 
 .btn-verde {
@@ -44,35 +46,67 @@ p {
     height: 33px;
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 15px;
+    border: 1px solid;
     background-color: $color2;
     color: $color4;
     align-items: center;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.container__user {
+    background-color: $color2;
+    color: $color4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.user {
+    padding-left: 10px;
 }
 
 .cards {
+    display: flex;
+    border-radius: 48px;
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+    margin: 15px;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.card {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0px 9px;
     grid-template-areas:
         "img detalle"
+        "img detalle"
         "img compra";
+    border-radius: 48px;
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+    margin: 15px;
+    flex-direction: column;
+    margin: 50px;
+}
 
-        border: 1px solid $color2;
-        border-radius: 20px;
-        margin: 15px;
-        padding: 20px;
+.card--md {
+    width: 328px;
+    height: 565px;
 }
-.card--md{
-    width: 400px;
-    height: 240px;
-}
+
 .card--xl {
     width: 600px;
     height: 470px;
 }
-.cantidadCompra{
+
+.cantidadCompra {
     width: 50px;
     margin: 10px;
     padding: 5px;
@@ -80,18 +114,44 @@ p {
     border-radius: 5px;
     border: 1px solid $color3;
 }
+
 .img {
     grid-area: img;
+}
+.img-banner{
+    border-radius: 0px 0px 160px 160px;
 }
 
 .detalle {
     grid-area: detalle;
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.card__detalle {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.detalle--titulo {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.detalle--precio {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.detalle--cantidad {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
 }
 
 .compra {
@@ -101,19 +161,25 @@ p {
     flex-wrap: wrap;
     justify-content: center;
 }
-.img-producto{
-    border-radius: 10px;
+
+.img-producto {
+    width: 328px;
+    height: 328px;
+    margin-bottom: 27px;
+    border-radius: 48px;
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
 }
-.img-producto--xl{
+
+.img-producto--xl {
     width: 310px;
 }
 
-.listProductos{
+.listProductos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
