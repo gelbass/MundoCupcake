@@ -13,37 +13,17 @@ const CartDetail = (props) => {
 				<Link to="/" className="btn btn-verde m-3">Ir al inicio</Link>
 			</div> :
 				<div className="container-fluid">
-					{cart.itemCart.map(item => <div className="container__carrito" key={item.id}><img className="img-thumbnail imgCarrito" src={item.img} alt={item.nombre}/><h3 className="titulo--carrito">{item.nombre}</h3> <div className="detalle--carrito"><strong>Precio: </strong>${item.precio}<strong>Cantidad: </strong>{item.itemAdd}<strong>Total: </strong>${item.totalItem}</div><div className="opcion--carrito"><input className="btn btn-verde" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></div></div>)}
-					<div className="row m-5">
-						<div className="table-responsive">
-							<table className="table">
-								<thead>
-									<tr>
-										<th className="col"></th>
-										<th className="col">Producto</th>
-										<th className="col">Precio Unitario</th>
-										<th className="col">Cantidad compra</th>
-										<th className="col">Total</th>
-										<th className="col"></th>
-									</tr>
-								</thead>
-								<tbody>
-									{cart.itemCart.map(item => <tr key={item.id}><td><img className="img-thumbnail" src={item.img} alt={item.nombre} /></td><td>{item.nombre}</td><td>{item.precio}</td><td>{item.itemAdd}</td><td>{item.totalItem}</td><td><input className="btn btn-verde" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></td></tr>)}
-								</tbody>
-								<tfoot>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td>Total compra</td>
-										<td>$ {cart.totalVenta}</td>
-									</tr>
-								</tfoot>
-							</table>
+					<div className="container ">
+						<h2 className="text-center m-5">TU DULCE COMPRA</h2>
+						{cart.itemCart.map(item => <div className="container container__carrito" key={item.id}><img className="img-thumbnail imgCarrito" src={item.img} alt={item.nombre} /><h3 className="titulo--carrito">{item.nombre}</h3> <div className="detalle--carrito"><strong>Precio: </strong>${item.precio}<strong>Cantidad: </strong>{item.itemAdd}<strong>Total: </strong>${item.totalItem}</div><div className="opcion--carrito"><input className="btn btn-verde" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></div></div>)}
+					</div>
+					<div class="container">
+						<hr />
+						<h3>Total compra: ${cart.totalVenta}</h3>
+						<div className="d-flex justify-contex-center">
+							{props.finalizaCompra || <Link to="/checkout" className="btn btn-verde mt-3 m-2">Finalizar compra</Link>}
+							{props.finalizaCompra || <input className="btn btn-verde mt-3 m-2" type="button" value="Eliminar todos los productos" onClick={() => cart.deleteAll()} />}
 						</div>
-						{props.finalizaCompra || <Link to="/checkout" className="btn btn-verde mt-3">Finalizar compra</Link>}
-						{props.finalizaCompra || <input className="btn btn-verde mt-3" type="button" value="Eliminar todos los productos" onClick={() => cart.deleteAll()} />}
 					</div>
 				</div>
 			}
