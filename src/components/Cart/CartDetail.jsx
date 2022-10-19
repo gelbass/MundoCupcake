@@ -13,6 +13,7 @@ const CartDetail = (props) => {
 				<Link to="/" className="btn btn-verde m-3">Ir al inicio</Link>
 			</div> :
 				<div className="container-fluid">
+					{cart.itemCart.map(item => <div className="container__carrito" key={item.id}><img className="img-thumbnail imgCarrito" src={item.img} alt={item.nombre}/><h3 className="titulo--carrito">{item.nombre}</h3> <div className="detalle--carrito"><strong>Precio: </strong>${item.precio}<strong>Cantidad: </strong>{item.itemAdd}<strong>Total: </strong>${item.totalItem}</div><div className="opcion--carrito"><input className="btn btn-verde" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></div></div>)}
 					<div className="row m-5">
 						<div className="table-responsive">
 							<table className="table">

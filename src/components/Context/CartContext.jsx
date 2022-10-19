@@ -1,5 +1,5 @@
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { createContext } from "react";
 import { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -12,13 +12,13 @@ const CartProvider = ({ children }) => {
 	const [totalVenta, setTotalVenta] = useState(0);
 	// const [usuario, setUsuario] = useState("");
 
-	// const cargarDataCarrito = () => {
-	// 	itemCart.forEach(item => {
-	// 		let totalItem = item.precio * item.itemAdd
-	// 		setCantCompra(cantCompra + item.itemAdd);
-	// 		setTotalVenta(totalVenta + totalItem)
-	// 	});
-	// }
+	const cargarDataCarrito = () => {
+		itemCart.forEach(item => {
+			let totalItem = item.precio * item.itemAdd
+			setCantCompra(cantCompra + item.itemAdd);
+			setTotalVenta(totalVenta + totalItem)
+		});
+	}
 
 	const onItem = (producto) => {
 		let totalItem = producto.precio * producto.itemAdd
@@ -59,9 +59,9 @@ const CartProvider = ({ children }) => {
 			deleteAll();
 		});
 	}
-	// useEffect(() => {
-	// 	localStorage.getItem('cart') && cargarDataCarrito();
-	// }, []);
+	useEffect(() => {
+		localStorage.getItem('cart') && cargarDataCarrito();
+	}, []);
 	return (
 		<CartContext.Provider value={{ cantCompra, onItem, itemCart, deleteItem, deleteAll, totalVenta, checkout }}>
 			{children}

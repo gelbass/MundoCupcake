@@ -70,6 +70,42 @@ p {
   display: flex;
 }
 
+.container__carrito {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 0.4fr;
+  grid-auto-flow: row;
+  grid-template-areas: "imgCarrito titulo opcion" "imgCarrito detalle opcion";
+  width: 721px;
+  align-items: center;
+  padding: 30px;
+}
+
+.carrito--elemento {
+  display: flex;
+}
+
+.imgCarrito {
+  grid-area: imgCarrito;
+}
+
+.opcion--carrito {
+  grid-area: opcion;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo--carrito {
+  grid-area: titulo;
+  text-align: center;
+}
+
+.detalle--carrito {
+  grid-area: detalle;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
 .user {
   padding-left: 10px;
 }
