@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/Containers/ItemDetailContainer';
 import ItemListContainer from './components/Containers/ItemListContainer';
 import CartProvider from './components/Context/CartContext';
 import NavBar from './components/NavBar';
-import { getFirestore, collection, getDocs , addDoc } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

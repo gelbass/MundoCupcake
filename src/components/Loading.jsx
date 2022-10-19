@@ -1,11 +1,12 @@
 import React from "react";
 
 const Loading = () => {
+  // let logoLoading = "./mundocupcake-01.png";
   return (
     <>
-      <h1>
-        Cargando
-      </h1>
+      {/* <img src={logoLoading} alt="Mundo Cupcake" /> */}
+      <span className="spinner">
+      </span>
     </>
   );
 };

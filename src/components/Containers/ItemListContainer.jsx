@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
@@ -19,7 +19,7 @@ const ItemListContainer = ({ productos }) => {
       });
       setLoading(false)
     }, 2000);
-  }, [categoria, producto]);
+  }, [categoria, productos]);
 
   return (
     <>
