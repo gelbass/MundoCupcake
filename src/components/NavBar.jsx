@@ -40,10 +40,6 @@ const NavBar = (props) => {
               </ul>
             </li>
           </ul>
-          <div className="container__user">
-            <i className="bi bi-person-circle"></i>
-            <h6 className="user">Usuario Demo</h6>
-          </div>
         </div>
         {cart.cantCompra === 0 ? <CartWidget cantidad={cart.cantCompra} /> : <Link className="link" to="/carrito"> <CartWidget cantidad={cart.cantCompra} /></Link>}
       </div>

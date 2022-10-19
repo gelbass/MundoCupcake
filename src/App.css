@@ -195,10 +195,10 @@ p {
   border-radius: 50%;
   z-index: 2;
   background-color: transparent;
-  border-top: 1px solid rgb(66, 139, 202);
-  border-right: 1px solid rgb(66, 139, 202);
-  border-bottom: 1px solid rgb(66, 139, 202);
-  border-left: 1px solid rgba(66, 139, 202, 0.2);
+  border-top: 1px solid #8ae9b5;
+  border-right: 1px solid #8ae9b5;
+  border-bottom: 1px solid #8ae9b5;
+  border-left: 1px solid rgba(138, 233, 181, 0.2);
   transform: translateZ(0);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -223,6 +223,12 @@ p {
   }
   to {
     transform: rotate(1turn);
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 421px) {
+  .card--xl {
+    width: 590px;
+    height: 516px;
   }
 }
 

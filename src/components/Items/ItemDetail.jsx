@@ -4,7 +4,6 @@ import Swal from 'sweetalert2'
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ producto, itemCart, onItem }) => {
-	// let url = "/img/"+producto.img;
 	const [isInCart, setIsInCart] = useState(false);
 	const onAdd = (itemAdd) => {
 		itemCart === [{}] || itemCart.includes(itemCart.find(item => item.id === producto.id)) ?  Swal.fire({
@@ -18,7 +17,7 @@ const ItemDetail = ({ producto, itemCart, onItem }) => {
 	return (
 		<>
 			<div className="cardProducto card--xl mx-auto">
-				<img className="img img-producto" src={producto.img} alt="producto" />
+				<img className="img img-producto img-producto--xl" src={producto.img} alt="producto" />
 				<div className="detalle">
 					<h5 className="detalle--titulo">{producto.nombre}</h5>
 					<h6>{producto.descripcion}</h6>
