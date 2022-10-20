@@ -29,6 +29,14 @@ p {
   line-height: 27px;
 }
 
+.footer {
+  width: 100%;
+  background-color: #fffdc6;
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
 .btn-verde {
   background-color: #8ae9b5 !important;
   border: 0.5px #198754 solid !important;

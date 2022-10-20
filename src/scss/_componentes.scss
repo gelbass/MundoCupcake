@@ -29,6 +29,13 @@ p {
     line-height: 27px;
 }
 
+.footer{
+    width: 100%;
+    background-color: $colorFooter;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
 .btn-verde {
     background-color: $color1 !important;
     border: 0.5px $color3 solid !important;

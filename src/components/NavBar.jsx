@@ -28,9 +28,6 @@ const NavBar = (props) => {
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to={"/"}>Inicio</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={url}>Nosotros</Link>
-            </li>
             <li className="nav-item dropdown">
               <a href={url} className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Productos
