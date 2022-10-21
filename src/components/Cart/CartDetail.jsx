@@ -20,7 +20,7 @@ const CartDetail = (props) => {
 					<div class="container">
 						<hr />
 						<h3>Total compra: ${cart.totalVenta}</h3>
-						<div className="d-flex justify-contex-center">
+						<div className="d-flex justify-contex-center botones">
 							{props.finalizaCompra || <Link to="/checkout" className="btn btn-verde mt-3 m-2">Finalizar compra</Link>}
 							{props.finalizaCompra || <input className="btn btn-verde mt-3 m-2" type="button" value="Eliminar todos los productos" onClick={() => cart.deleteAll()} />}
 						</div>
