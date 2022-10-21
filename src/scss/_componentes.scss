@@ -36,6 +36,7 @@ p {
     margin-top: 60px;
     padding-bottom: 60px;
 }
+
 .btn-verde {
     background-color: $color1 !important;
     border: 0.5px $color3 solid !important;
@@ -261,10 +262,10 @@ p {
     }
 
     background-color: transparent;
-    border-top: 1px solid $color1;
-    border-right: 1px solid $color1;
-    border-bottom: 1px solid $color1;
-    border-left: 1px solid rgba(138, 233, 181, 0.2);
+    border-top: 3px solid $color1;
+    border-right: 3px solid $color1;
+    border-bottom: 3px solid $color1;
+    border-left: 3px solid rgba(138, 233, 181, 0.2);
     transform: translateZ(0);
     animation-iteration-count: infinite;
     animation-timing-function: linear;

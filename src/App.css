@@ -240,10 +240,10 @@ p {
   border-radius: 50%;
   z-index: 2;
   background-color: transparent;
-  border-top: 1px solid #8ae9b5;
-  border-right: 1px solid #8ae9b5;
-  border-bottom: 1px solid #8ae9b5;
-  border-left: 1px solid rgba(138, 233, 181, 0.2);
+  border-top: 3px solid #8ae9b5;
+  border-right: 3px solid #8ae9b5;
+  border-bottom: 3px solid #8ae9b5;
+  border-left: 3px solid rgba(138, 233, 181, 0.2);
   transform: translateZ(0);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
