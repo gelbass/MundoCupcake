@@ -35,7 +35,7 @@ p {
     text-align: center;
     margin-top: 80px;
     padding-bottom: 60px;
-    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+    box-shadow: 0px -2px 4px 0px rgb(0 0 0 / 25%);
 }
 
 .btn-verde {
@@ -47,6 +47,17 @@ p {
         background-color: $color2 !important;
         border: 0.5px solid !important;
         color: $color4 !important;
+    }
+}
+.btn-rosa {
+    background-color: $color2 !important;
+    border: 0.5px $color2 solid !important;
+    color: $color4 !important;
+
+    &:hover {
+        background-color: $color1 !important;
+        border: 0.5px solid !important;
+        color: $color5 !important;
     }
 }
 

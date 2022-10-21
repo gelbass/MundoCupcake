@@ -15,7 +15,7 @@ const CartDetail = (props) => {
 				<div className="container-fluid">
 					<div className="container ">
 						<h2 className="text-center m-5">TU DULCE COMPRA</h2>
-						{cart.itemCart.map(item => <div className="container container__carrito" key={item.id}><img className="img-thumbnail imgCarrito" src={item.img} alt={item.nombre} /><h3 className="titulo--carrito">{item.nombre}</h3> <div className="detalle--carrito"><strong>Precio: </strong>${item.precio}<strong>Cantidad: </strong>{item.itemAdd}<strong>Total: </strong>${item.totalItem}</div><div className="opcion--carrito"><input className="btn btn-verde" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></div></div>)}
+						{cart.itemCart.map(item => <div className="container container__carrito" key={item.id}><img className="img-thumbnail imgCarrito" src={item.img} alt={item.nombre} /><h3 className="titulo--carrito">{item.nombre}</h3> <div className="detalle--carrito"><strong>Precio: </strong>${item.precio}<strong>Cantidad: </strong>{item.itemAdd}<strong>Total: </strong>${item.totalItem}</div><div className="opcion--carrito"><input className="btn btn-rosa" type="button" value="Eliminar" onClick={() => cart.deleteItem(item.id)} /></div></div>)}
 					</div>
 					<div class="container">
 						<hr />

@@ -35,7 +35,7 @@ p {
   text-align: center;
   margin-top: 80px;
   padding-bottom: 60px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .btn-verde {
@@ -47,6 +47,17 @@ p {
   background-color: #f99698 !important;
   border: 0.5px solid !important;
   color: #ffffff !important;
+}
+
+.btn-rosa {
+  background-color: #f99698 !important;
+  border: 0.5px #f99698 solid !important;
+  color: #ffffff !important;
+}
+.btn-rosa:hover {
+  background-color: #8ae9b5 !important;
+  border: 0.5px solid !important;
+  color: #00140b !important;
 }
 
 .cartWidget {

@@ -26,7 +26,7 @@ const Checkout = () => {
   const generarPedido = () => {
     const date = new Date();
     const fechaPedido = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-    const orden = {cliente:clienteForm, Fecha:fechaPedido,total:cart.totalVenta,productos:cart.itemCart};
+    const orden = { cliente: clienteForm, Fecha: fechaPedido, total: cart.totalVenta, productos: cart.itemCart };
     cart.checkout(orden);
   }
 
@@ -59,7 +59,9 @@ const Checkout = () => {
             <div className="col">
               <CartDetail finalizaCompra={true} />
             </div>
-            <input className="btn btn-verde mt-3" type="submit" value="Realizar pago" onClick={() => generarPedido()} />
+            <div className="d-flex justify-content-center">
+              <input className="btn btn-verde mt-3" type="submit" value="Realizar pago" onClick={() => generarPedido()} />
+            </div>
           </div>
         </div>
       </>
